@@ -71,3 +71,28 @@ class StackLinkedList:
 
     def top(self):
         return self.list.head.data
+
+
+class QueueLinkedList():
+  def __init__(self):
+    self.linkedlist = LinkedList()
+  
+  def push(self, item):
+    self.linkedlist.insert(item)
+
+  def pop(self): 
+    if self.linkedlist.head is None:
+            return None
+    elif self.linkedlist.head.next is None:
+        last = self.linkedlist.head.data
+        self.linkedlist.head = None
+        return last
+    else:
+        head_item = self.linkedlist.head.data
+        self.linkedlist.head = self.linkedlist.head.next
+        return head_item
+
+  def front(self):
+    if self.linkedlist.head is not None:
+      return self.linkedlist.head.data
+    return None
