@@ -22,6 +22,20 @@ A. Set
 Выходные данные
 Выведите последовательно результат выполнения всех операций exists.
 Следуйте формату выходного файла из примера.
+
+Input:
+insert 2
+insert 5
+insert 3
+exists 2
+exists 4
+insert 2
+delete 2
+exists 2
+Output:
+true
+false
+false
 """
 
 import sys
